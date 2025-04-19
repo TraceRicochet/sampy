@@ -1,6 +1,7 @@
 - This is a node based CLI tool called Weez.
 - It's used for scaffolding frontend projects, one tool at at time. 
 - It uses JavaScript for the CLI code.
+- The commands will be configured to use `pnpm`.
 
 Example:
 
