@@ -1,0 +1,39 @@
+- This is a node based CLI tool called Weez.
+- It's used for scaffolding frontend projects, one tool at at time. 
+- It uses JavaScript for the CLI code.
+
+Example:
+
+```bash
+weez prettier
+```
+
+At some future point, I may want to add an overall command that will install all tools, instead of one at a time.
+
+- Here is the current directory structure:
+
+weez-cli/
+├── bin/
+│   └── weez.js        # Entry point for the CLI (bin executable)
+├── src/
+│   ├── commands/      # Individual command implementations
+│   │   ├── prettier.js
+│   │   ├── eslint.js
+│   │   └── index.js   # Exports all commands
+│   ├── templates/     # Template files for configurations
+│   │   ├── prettier/
+│   │   │   └── .prettierrc.js
+│   │   └── eslint/
+│   │       └── eslint.config.mjs
+│   ├── utils/         # Utility functions
+│   │   ├── banner.js  # ASCII art and CLI banner
+│   │   ├── file.js    # File operations
+│   │   ├── npm.js     # npm/package.json operations
+│   │   └── index.js   # Exports all utilities
+│   └── index.js       # Main application logic
+├── package.json
+├── README.md
+└── .gitignore
+
+
+- Create conventional commit messages for changes.
