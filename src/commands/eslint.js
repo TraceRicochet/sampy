@@ -161,6 +161,7 @@ async function updateVSCodeSettings(inquirer) {
           "mode": "auto"
         }
       ],
+      "css.lint.unknownAtRules": "ignore",
       "eslint.useFlatConfig": true,
       "eslint.format.enable": true,
       "eslint.options": {
