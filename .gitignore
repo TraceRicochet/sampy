@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.*
+
+# macOS
+.DS_Store
+
+# Temporary files created by editors
+*.swp
+*.swo
+*~
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Coverage reports
+coverage/
