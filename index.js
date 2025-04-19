@@ -13,7 +13,7 @@ const program = new Command();
 // Display banner and tagline using dynamic import for chalk
 (async () => {
   const chalk = (await import('chalk')).default;
-  console.log(chalk.magenta(`
+  console.log(chalk.cyan(`
 ██     ██ ███████ ███████ ███████ 
 ██     ██ ██      ██         ███  
 ██  █  ██ █████   █████     ███   
