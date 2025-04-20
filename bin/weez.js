@@ -23,8 +23,8 @@ async function initCLI() {
     .addHelpText('after', 
   `
 
-Documentation: https://weez-docs.example.com
-Repository: https://github.com/yourusername/weez
+Documentation: https://github.com/TraceRicochet/weez-cli
+Repository: https://github.com/TraceRicochet/weez-cli
   `);
 
   // Register all commands
