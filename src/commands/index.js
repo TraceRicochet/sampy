@@ -4,6 +4,7 @@ const nextjsCleanCommand = require('./next-clean');
 const shadcnCommand = require('./shadcn');
 const commitlintCommand = require('./commitlint');
 const changelogCommand = require('./changelogen');
+const vitestCommand = require('./vitest');
 
 /**
  * Registers all commands with the Commander program
@@ -17,7 +18,8 @@ function registerCommands(program) {
     nextjsCleanCommand,
     shadcnCommand,
     commitlintCommand,
-    changelogCommand
+    changelogCommand,
+    vitestCommand
     // Add new commands here as they are created
   ];
 
