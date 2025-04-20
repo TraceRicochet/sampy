@@ -23,3 +23,7 @@ logs/
 
 # Coverage reports
 coverage/
+
+
+# Windsurf rules
+.windsurfrules
