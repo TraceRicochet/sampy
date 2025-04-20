@@ -20,7 +20,7 @@ function registerCommands(program) {
     commitlintCommand,
     changelogCommand,
     vitestCommand
-    // Add new commands here as they are created
+    // Add new commands here
   ];
 
   commands.forEach(cmd => {
