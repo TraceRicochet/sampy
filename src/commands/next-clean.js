@@ -83,63 +83,12 @@ async function cleanNextjsBoilerplate() {
         
         // Prepare the CSS content based on the template or fallback
         if (fileExists(templatePath)) {
-          minimalCss = fs.readFileSync(templatePath, 'utf8');
+          // minimalCss = fs.readFileSync(templatePath, 'utf8');
+          minimalCss = `@import "tailwindcss";`;
           console.log('Using template CSS from templates/nextjs/globals.css');
         } else {
           // Fallback to a basic template if the file doesn't exist
-          minimalCss = `@import "tailwindcss";
-
-:root {
-  --foreground: #000;
-  --background: #fff;
-  --scrollbar-thumb: #888;
-  --scrollbar-track: #f1f1f1;
-  --primary: #0070f3;
-}
-
-.dark {
-  --foreground: #fff;
-  --background: #000;
-  --scrollbar-thumb: #555;
-  --scrollbar-track: #333;
-  --primary: #3291ff;
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-/* * {
-  zoom: 0.995;
-} */
-
-body {
-  scrollbar-width: thin; 
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--scrollbar-track);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
-}`;
+          minimalCss = `@import "tailwindcss";`;
           console.log('Could not find CSS template, using basic fallback');
         }
         writeToFile(globalCssPath, minimalCss);
