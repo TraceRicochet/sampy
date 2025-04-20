@@ -10,7 +10,7 @@
     "start": "node bin/weez.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "changelog": "npx changelogen@latest --release"
+    "changelog": "npx changelogen@latest --release" 
   },
   "keywords": [
     "cli",
