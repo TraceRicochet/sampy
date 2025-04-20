@@ -2,6 +2,7 @@ const prettierCommand = require('./prettier');
 const eslintCommand = require('./eslint');
 const nextjsCleanCommand = require('./next-clean');
 const shadcnCommand = require('./shadcn');
+const commitlintCommand = require('./commitlint');
 
 /**
  * Registers all commands with the Commander program
@@ -13,7 +14,8 @@ function registerCommands(program) {
     prettierCommand,
     eslintCommand,
     nextjsCleanCommand,
-    shadcnCommand
+    shadcnCommand,
+    commitlintCommand
     // Add new commands here as they are created
   ];
 
