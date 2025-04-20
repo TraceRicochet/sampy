@@ -1,0 +1,25 @@
+{
+  "types": {
+    "feat": { "title": "🚀 Features" },
+    "fix": { "title": "🐛 Bug Fixes" },
+    "docs": { "title": "📖 Documentation" },
+    "style": { "title": "💄 Styles" },
+    "refactor": { "title": "♻️ Refactors" },
+    "perf": { "title": "⚡️ Performance" },
+    "test": { "title": "✅ Tests" },
+    "build": { "title": "📦 Build" },
+    "ci": { "title": "🤖 CI" },
+    "chore": { "title": "🏠 Chore" },
+    "revert": { "title": "⏪ Reverts" },
+    "deps": { "title": "📦 Dependencies" }
+  },
+  "templates": {
+    "commitMessage": "chore(release): v{{newVersion}}",
+    "tagMessage": "v{{newVersion}}",
+    "tagName": "v{{newVersion}}",
+    "releaseTitle": "v{{newVersion}}",
+    "group": "### {{title}}\n\n",
+    "commit": "- {{message}} ([{{hash}}]({{commitUrl}}))\n",
+    "release": "# Changelog\n\n## {{version}}\n\n[compare changes]({{compareUrl}})\n\n{{groups}}"
+  }
+}
