@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node bin/weez.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
   },
   "keywords": [
     "cli",
@@ -21,9 +22,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.3.0",
     "commander": "^11.0.0",
     "inquirer": "^9.2.10",
-    "shelljs": "^0.8.5",
-    "chalk": "^5.3.0"
+    "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/types": "^19.8.0",
+    "husky": "^9.1.7"
   }
 }
