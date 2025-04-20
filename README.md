@@ -22,10 +22,7 @@ A command-line tool to scaffold frontend projects, one tool at a time. Weez help
 - 🎨 **Customizable**: Options to tailor configurations to your project needs
 - 🔄 **Consistent**: Standardized configurations across all your projects
 
-> Weez is currently in alpha and may have breaking changes.
-
 ## Installation
-
 
 > [!TIP] 
 > The recommended way to install Weez is using npx or pnpm dlx. 
