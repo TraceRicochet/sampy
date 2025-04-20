@@ -57,7 +57,7 @@ Repository: https://github.com/yourusername/weez
 
       if (answers.installPrettier) {
         console.log('Installing Prettier...');
-        shell.exec('npm install --save-dev prettier');
+        shell.exec('pnpm install --save-dev prettier');
         console.log('Prettier installed successfully!');
 
         // Update consumer's package.json with Prettier scripts
@@ -136,7 +136,7 @@ Repository: https://github.com/yourusername/weez
 
         if (answers.installEslint) {
           console.log('Installing ESLint and plugins...');
-          shell.exec('npm install --save-dev eslint@9 @next/eslint-plugin-next @stylistic/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-react-hooks eslint-plugin-simple-import-sort eslint-plugin-unused-imports eslint-plugin-react-refresh globals');
+          shell.exec('pnpm install --save-dev eslint@9 @next/eslint-plugin-next @stylistic/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-react-hooks eslint-plugin-simple-import-sort eslint-plugin-unused-imports eslint-plugin-react-refresh globals');
           console.log('ESLint and plugins installed successfully!');
 
           // Update consumer's package.json with ESLint scripts

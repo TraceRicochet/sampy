@@ -9,7 +9,7 @@ const { fileExists, readFromFile, writeToFile } = require('./file');
  */
 function installDevDependencies(packages) {
   const packageList = Array.isArray(packages) ? packages.join(' ') : packages;
-  const result = shell.exec(`npm install --save-dev ${packageList}`);
+  const result = shell.exec(`pnpm install --save-dev ${packageList}`);
   return result.code === 0;
 }
 
