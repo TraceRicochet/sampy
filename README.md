@@ -25,7 +25,7 @@ A command-line tool to scaffold frontend projects, one tool at a time. Weez help
 ## Installation
 
 > [!TIP] 
-> The recommended way to install Weez is using npx or pnpm dlx. 
+> The recommended way to install Weez is using `npx` or `pnpm dlx`
 
 Using npx
 
@@ -33,7 +33,7 @@ Using npx
 npx weez prettier
 ```
 
-Or using pnpm dlx:
+Using pnpm dlx:
 
 ```bash
 pnpm dlx weez prettier
