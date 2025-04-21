@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.1
+
+[compare changes](https://github.com/TraceRicochet/sampy/compare/v1.2.1...v1.6.1)
+
+### 🩹 Fixes
+
+- Fixes to the build process ([da5d391](https://github.com/TraceRicochet/sampy/commit/da5d391))
+
+### 🏡 Chore
+
+- **release:** V1.2.1 ([b6f3c4e](https://github.com/TraceRicochet/sampy/commit/b6f3c4e))
+- Changed name to sampy and fixed publishing issues ([a293f3b](https://github.com/TraceRicochet/sampy/commit/a293f3b))
+- Bumped version and re-published ([06e077c](https://github.com/TraceRicochet/sampy/commit/06e077c))
+- Updated all occurances of weez to sampy ([b8a54a3](https://github.com/TraceRicochet/sampy/commit/b8a54a3))
+- Bumped a version and published ([1d7785f](https://github.com/TraceRicochet/sampy/commit/1d7785f))
+
+### ❤️ Contributors
+
+- Trace Ricochet <lasercobra@protonmail.com>
+
 ## v1.2.1
 
 [compare changes](https://github.com/TraceRicochet/weez-cli/compare/v1.2.0...v1.2.1)
