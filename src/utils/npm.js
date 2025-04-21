@@ -9,9 +9,9 @@ const { fileExists, readFromFile, writeToFile } = require('./file');
  */
 function installDevDependencies(packages) {
   const packageList = Array.isArray(packages) ? packages.join(' ') : packages;
-  // Use --no-package-lock to prevent package-lock.json creation
-  // Use --prefer-offline to speed up installations when possible
-  const result = shell.exec(`pnpm install --save-dev ${packageList} --no-package-lock --prefer-offline`);
+  // Use pnpm-specific flags
+  // --prefer-offline to speed up installations when possible
+  const result = shell.exec(`pnpm add -D ${packageList} --prefer-offline`);
   return result.code === 0;
 }
 
