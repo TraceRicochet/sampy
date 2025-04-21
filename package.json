@@ -2,24 +2,20 @@
   "name": "weez-cli",
   "version": "1.1.0",
   "description": "Weez CLI - A tool to configure development tools for projects",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "bin": {
-    "weez": "bin/weez.js"
+    "weez": "dist/bin/weez.js"
   },
   "scripts": {
-    "start": "node bin/weez.js",
+    "start": "node dist/bin/weez.js",
+    "dev": "node bin/weez.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "changelog": "npx changelogen@latest --release" 
+    "changelog": "npx changelogen@latest --release",
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [
-    "cli",
-    "configuration",
-    "prettier",
-    "eslint",
-    "commitlint",
-    "vitest"
-  ],
+  "keywords": ["trace ricochet"],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -34,6 +30,8 @@
     "@commitlint/config-conventional": "^19.8.0",
     "@commitlint/types": "^19.8.0",
     "changelogen": "^0.6.1",
+    "esbuild": "^0.25.2",
+    "fs-extra": "^11.3.0",
     "husky": "^9.1.7"
   }
 }
