@@ -39,7 +39,7 @@ async function initCLI() {
   const program = new Command();
 
   program
-    .name('weez')
+    .name('sampy')
     .description('A scaffolding CLI tool for frontend projects')
     .version(packageJson.version, '-V, --version', 'output the version number')
     .option('-v', 'output the version number', () => {

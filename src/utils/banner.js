@@ -2,8 +2,19 @@
  * Displays the CLI banner with ASCII art
  */
 async function displayBanner() {
-  // Use dynamic import for chalk due to ES module compatibility
-  const chalk = (await import('chalk')).default;
+  // Handle both ESM and CommonJS versions of chalk
+  let chalk;
+  try {
+    // Try CommonJS first
+    chalk = require('chalk');
+  } catch (error) {
+    // Fall back to ESM if CommonJS fails
+    if (error.code === 'ERR_REQUIRE_ESM') {
+      chalk = (await import('chalk')).default;
+    } else {
+      throw error;
+    }
+  }
   
   console.log(chalk.cyan(`
 ██     ██ ███████ ███████ ███████ 

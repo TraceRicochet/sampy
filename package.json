@@ -1,19 +1,16 @@
 {
-  "name": "weez-cli",
-  "version": "1.2.2",
-  "description": "Weez CLI",
-  "main": "dist/index.js",
+  "name": "sampy",
+  "version": "1.5.0",
+  "description": "Setup All My Projects. Yeah! - A scaffolding CLI for frontend projects",
   "bin": {
-    "weez": "dist/bin/weez.js"
+    "sampy": "bin/weez.js"
   },
+  "type": "commonjs",
   "scripts": {
-    "start": "node dist/bin/weez.js",
-    "dev": "node bin/weez.js",
+    "start": "node bin/weez.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "changelog": "npx changelogen@latest --release",
-    "build": "node build.js",
-    "prepublishOnly": "npm run build"
+    "changelog": "npx changelogen@latest --release"
   },
   "keywords": [
     "trace ricochet"
@@ -21,11 +18,11 @@
   "author": "",
   "license": "ISC",
   "files": [
-    "dist/**/*",
-    "bin/**/*"
+    "bin",
+    "src"
   ],
   "dependencies": {
-    "chalk": "^5.3.0",
+    "chalk": "^4.1.2",
     "commander": "^11.0.0",
     "inquirer": "^9.2.10",
     "shelljs": "^0.8.5",
