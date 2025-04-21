@@ -106,7 +106,7 @@ This workflow allows for rapid iteration and testing of new features.
 ## Future Improvements
 
 - Single command to install all dependencies (sampy-stack)
-- Single command to install my usual dependencies (zustand, react-scan, etc..)
+- Single command to install my usual dependencies
 - Command for configuring Supabase Auth
 - Sentry integration for error reporting
 
