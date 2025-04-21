@@ -78,14 +78,30 @@ const buildCli = async () => {
       ],
     });
     
-    // Create a simple CLI entry point that requires the original bin file
-    const binContent = `#!/usr/bin/env node
-
-require('../../bin/weez.js');
-`;
+    // Bundle the CLI entry point directly
+    await build({
+      entryPoints: ['bin/weez.js'],
+      bundle: true,
+      platform: 'node',
+      target: 'node14',
+      outfile: 'dist/bin/weez.js',
+      minify: true,
+      format: 'cjs',
+      banner: {
+        js: '#!/usr/bin/env node',
+      },
+      external: [
+        // External packages that shouldn't be bundled
+        'inquirer',
+        'chalk',
+        'commander',
+        'shelljs',
+        'update-notifier'
+      ],
+    });
     
+    // Make the bin file executable
     const binPath = path.join(binDir, 'weez.js');
-    require('fs').writeFileSync(binPath, binContent);
     require('fs').chmodSync(binPath, '755'); // Make it executable
     
     console.log('✅ CLI bundled successfully');

@@ -1,6 +1,6 @@
 {
   "name": "weez-cli",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Weez CLI",
   "main": "dist/index.js",
   "bin": {
@@ -20,6 +20,10 @@
   ],
   "author": "",
   "license": "ISC",
+  "files": [
+    "dist/**/*",
+    "bin/**/*"
+  ],
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^11.0.0",
