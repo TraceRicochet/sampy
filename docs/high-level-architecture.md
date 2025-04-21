@@ -1,13 +1,13 @@
-# High-Level Architecture of Weez CLI
+# High-Level Architecture of Sampy
 
 The application follows a modular architecture typical of Node.js CLI tools:
 
-## 1. Entry Point: bin/weez.js
+## 1. Entry Point: bin/sampy.js
 
-This is the actual executable that runs when a user types `weez` in their terminal. Despite looking simple, it's crucial because:
+This is the actual executable that runs when a user types `sampy` in their terminal. Despite looking simple, it's crucial because:
 
 - It has the shebang line (`#!/usr/bin/env node`) that tells the system to execute it with Node.js
-- It's referenced in your package.json's `bin` field, which is what makes the `weez` command available
+- It's referenced in your package.json's `bin` field, which is what makes the `sampy` command available
 - It imports and initializes the core components of your application
 - It sets up the Commander.js framework which handles command-line parsing
 
@@ -42,10 +42,10 @@ These are template files that get copied to the user's project when they run a c
 
 ## The Flow of Execution
 
-When a user runs `weez prettier`, this is what happens:
+When a user runs `sampy prettier`, this is what happens:
 
-1. The system executes `bin/weez.js` due to the package.json `bin` configuration
-2. `bin/weez.js` displays the banner and sets up the Commander program
+1. The system executes `bin/sampy.js` due to the package.json `bin` configuration
+2. `bin/sampy.js` displays the banner and sets up the Commander program
 3. It imports `src/commands/index.js` which registers all available commands
 4. Commander parses the arguments (`prettier`) and executes the corresponding action
 5. The action function in `src/commands/prettier.js` runs, which:
@@ -61,11 +61,11 @@ The key to exposing commands is the combination of:
 1. **package.json bin field**:
 ```json
 "bin": {
-  "weez": "bin/weez.js"
+  "sampy": "bin/sampy.js"
 }
 ```
 
-This tells npm to create a symlink named weez that points to bin/weez.js when the package is installed globally or linked.
+This tells npm to create a symlink named sampy that points to bin/sampy.js when the package is installed globally or linked.
 
 2. **Commander.js registration**:
 
@@ -99,13 +99,13 @@ To test new commands during development:
 1. Make changes to an existing command or create a new one in `src/commands/`
 2. Update `src/commands/index.js` to include your new command
 3. Run `pnpm link` in the project root to make the CLI available globally
-4. Test your command by running `weez your-command`
+4. Test your command by running `sampy your-command`
 
 This workflow allows for rapid iteration and testing of new features.
 
 ## Future Improvements
 
-- Single command to install all dependencies (weez-stack)
+- Single command to install all dependencies (sampy-stack)
 - Single command to install my usual dependencies (zustand, react-scan, etc..)
 - Command for configuring Supabase Auth
 - Sentry integration for error reporting

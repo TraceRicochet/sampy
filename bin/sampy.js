@@ -49,8 +49,8 @@ async function initCLI() {
     .addHelpText('after', 
   `
 
-Documentation: https://github.com/TraceRicochet/weez-cli
-Repository: https://github.com/TraceRicochet/weez-cli
+Documentation: https://github.com/TraceRicochet/sampy
+Repository: https://github.com/TraceRicochet/sampy
   `);
 
   // Register all commands

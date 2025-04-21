@@ -79,10 +79,10 @@ const buildCli = async () => {
     });
     
     // Create a direct CLI entry point
-    const binPath = path.join(binDir, 'weez.js');
+    const binPath = path.join(binDir, 'sampy.js');
     const binContent = `#!/usr/bin/env node
 
-require('${path.relative(binDir, path.join(__dirname, 'bin', 'weez.js'))}');
+require('${path.relative(binDir, path.join(__dirname, 'bin', 'sampy.js'))}');
 `;
     
     // Write the bin file
@@ -99,7 +99,7 @@ require('${path.relative(binDir, path.join(__dirname, 'bin', 'weez.js'))}');
 
 // Main build process
 const main = async () => {
-  console.log('🚀 Building weez-cli...');
+  console.log('🚀 Building sampy...');
   await buildCli();
   copyTemplates();
   console.log('✨ Build completed successfully!');

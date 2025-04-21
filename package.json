@@ -3,11 +3,11 @@
   "version": "1.5.1",
   "description": "Setup All My Projects. Yeah! - A scaffolding CLI for frontend projects",
   "bin": {
-    "sampy": "bin/weez.js"
+    "sampy": "bin/sampy.js"
   },
   "type": "commonjs",
   "scripts": {
-    "start": "node bin/weez.js",
+    "start": "node bin/sampy.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "changelog": "npx changelogen@latest --release"

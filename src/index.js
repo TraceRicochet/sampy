@@ -1,5 +1,5 @@
 /**
- * Main entry point for weez-cli functionality
+ * Main entry point for sampy functionality
  * This file exports all the necessary modules for the CLI to function
  */
 
