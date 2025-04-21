@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.0
+
+[compare changes](https://github.com/TraceRicochet/weez-cli/compare/v1.1.0...v1.2.0)
+
+### 🚀 Enhancements
+
+- Added changelogen to the project for release info management ([304db0e](https://github.com/TraceRicochet/weez-cli/commit/304db0e))
+- Added esbuild for distribution ([63d8de2](https://github.com/TraceRicochet/weez-cli/commit/63d8de2))
+
+### 🩹 Fixes
+
+- Fix issue with package-lock files getting created when running weez commands ([758f346](https://github.com/TraceRicochet/weez-cli/commit/758f346))
+
+### 💅 Refactors
+
+- Rename shadcn command to next-themes-toggle and simplify CSS template ([28677e4](https://github.com/TraceRicochet/weez-cli/commit/28677e4))
+- Update vitest confguration to include coverage in the UI ([d198731](https://github.com/TraceRicochet/weez-cli/commit/d198731))
+
+### 📖 Documentation
+
+- Removed most of the readme for now ([6e043d8](https://github.com/TraceRicochet/weez-cli/commit/6e043d8))
+
+### 🏡 Chore
+
+- **release:** V1.1.0 ([885b8ce](https://github.com/TraceRicochet/weez-cli/commit/885b8ce))
+- Created a docs folder for .md files ([2a7c859](https://github.com/TraceRicochet/weez-cli/commit/2a7c859))
+- Removed .windsurfrules ([a269651](https://github.com/TraceRicochet/weez-cli/commit/a269651))
+- Add rules to .gitignore ([36e77df](https://github.com/TraceRicochet/weez-cli/commit/36e77df))
+- Deleted unused package.json file ([ae95084](https://github.com/TraceRicochet/weez-cli/commit/ae95084))
+
+### ❤️ Contributors
+
+- Trace Ricochet <lasercobra@protonmail.com>
+
 ## v1.1.0
 
 
