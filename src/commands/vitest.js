@@ -39,12 +39,14 @@ async function configureVitest() {
       console.log('Installing Vitest and related dependencies...');
       const dependencies = [
         'vitest',
-        '@vitejs/plugin-react',
         'jsdom',
+        'vite-tsconfig-paths',
         '@testing-library/react',
         '@testing-library/dom',
         '@testing-library/jest-dom',
-        'vite-tsconfig-paths'
+        '@vitest/ui',
+        '@vitejs/plugin-react',
+        '@vitest/coverage-v8'
       ];
       
       const success = installDevDependencies(dependencies);
@@ -119,12 +121,7 @@ async function configureVitest() {
       console.log('  pnpm test           - Run tests once');
       console.log('  pnpm test:watch     - Run tests in watch mode');
       console.log('  pnpm test:coverage  - Run tests with coverage report');
-      
-      console.log('\nFor UI mode, you\'ll need to install @vitest/ui:');
-      console.log('  pnpm add -D @vitest/ui');
-      console.log('Then run:');
-      console.log('  pnpm test:ui');
-      
+      console.log('  pnpm test:ui        - Run tests in UI mode');
     } catch (error) {
       console.error('Error during Vitest setup:', error.message);
     }

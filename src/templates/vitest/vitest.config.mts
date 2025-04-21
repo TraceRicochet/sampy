@@ -16,7 +16,8 @@ export default defineConfig({
     setupFiles: ['./vitest.setup.ts'],
     coverage: {
       provider: 'v8', // or 'istanbul'
-      reporter: ['text', 'json', 'html'],
+      reporter: ['text', 'json', 'html', 'lcov'],
+      reportsDirectory: './coverage',
       exclude: [
         'node_modules/**',
         '.next/**',
@@ -34,7 +35,16 @@ export default defineConfig({
       branches: 70,
       functions: 70,
       lines: 70,
-      statements: 70
+      statements: 70,
+      // Enable these options to ensure coverage is visible in UI
+      enabled: true,
+      clean: true
+    },
+    ui: {
+      // Enable coverage in UI
+      coverage: {
+        enabled: true
+      }
     }
   },
   resolve: {
