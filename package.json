@@ -1,7 +1,7 @@
 {
   "name": "weez-cli",
   "version": "1.2.0",
-  "description": "Weez CLI - A tool to configure development tools for projects",
+  "description": "Weez CLI",
   "main": "dist/index.js",
   "bin": {
     "weez": "dist/bin/weez.js"
