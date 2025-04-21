@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.1
+
+[compare changes](https://github.com/TraceRicochet/weez-cli/compare/v1.2.0...v1.2.1)
+
+### 📖 Documentation
+
+- Updated description ([ee00993](https://github.com/TraceRicochet/weez-cli/commit/ee00993))
+
+### 🏡 Chore
+
+- **release:** V1.2.0 ([0ee2394](https://github.com/TraceRicochet/weez-cli/commit/0ee2394))
+
+### ❤️ Contributors
+
+- Trace Ricochet <lasercobra@protonmail.com>
+
 ## v1.2.0
 
 [compare changes](https://github.com/TraceRicochet/weez-cli/compare/v1.1.0...v1.2.0)
