@@ -36,12 +36,21 @@ async function cleanNextjsBoilerplate() {
       }
     }
 
-    // Determine if the project uses the app directory
-    let appDirExists = fs.existsSync(path.join(process.cwd(), 'app'));
-    let pagesDirExists = fs.existsSync(path.join(process.cwd(), 'pages'));
-    
-    if (!appDirExists && !pagesDirExists) {
-      console.log(chalk.red('Could not find "app" or "pages" directory. Make sure this is a Next.js project.'));
+    // Determine if the project uses the app or pages directory, including inside src
+    let appDir = null;
+    let pagesDir = null;
+    if (fs.existsSync(path.join(process.cwd(), 'app'))) {
+      appDir = path.join(process.cwd(), 'app');
+    } else if (fs.existsSync(path.join(process.cwd(), 'src', 'app'))) {
+      appDir = path.join(process.cwd(), 'src', 'app');
+    }
+    if (fs.existsSync(path.join(process.cwd(), 'pages'))) {
+      pagesDir = path.join(process.cwd(), 'pages');
+    } else if (fs.existsSync(path.join(process.cwd(), 'src', 'pages'))) {
+      pagesDir = path.join(process.cwd(), 'src', 'pages');
+    }
+    if (!appDir && !pagesDir) {
+      console.log(chalk.red('Could not find "app" or "pages" directory in root or src. Make sure this is a Next.js project.'));
       return;
     }
 
@@ -64,10 +73,10 @@ async function cleanNextjsBoilerplate() {
     if (answers.clearGlobalCss) {
       let globalCssPath;
       
-      if (appDirExists) {
-        globalCssPath = path.join(process.cwd(), 'app', 'globals.css');
+      if (appDir) {
+        globalCssPath = path.join(appDir, 'globals.css');
         if (!fileExists(globalCssPath)) {
-          globalCssPath = path.join(process.cwd(), 'app', 'global.css');
+          globalCssPath = path.join(appDir, 'global.css');
         }
       } else {
         globalCssPath = path.join(process.cwd(), 'styles', 'globals.css');
@@ -101,22 +110,21 @@ async function cleanNextjsBoilerplate() {
     // Simplify main page
     if (answers.simplifyMainPage) {
       let mainPagePath;
-      
-      if (appDirExists) {
-        mainPagePath = path.join(process.cwd(), 'app', 'page.tsx');
+      if (appDir) {
+        mainPagePath = path.join(appDir, 'page.tsx');
         if (!fileExists(mainPagePath)) {
-          mainPagePath = path.join(process.cwd(), 'app', 'page.jsx');
+          mainPagePath = path.join(appDir, 'page.jsx');
         }
         if (!fileExists(mainPagePath)) {
-          mainPagePath = path.join(process.cwd(), 'app', 'page.js');
+          mainPagePath = path.join(appDir, 'page.js');
         }
-      } else {
-        mainPagePath = path.join(process.cwd(), 'pages', 'index.tsx');
+      } else if (pagesDir) {
+        mainPagePath = path.join(pagesDir, 'index.tsx');
         if (!fileExists(mainPagePath)) {
-          mainPagePath = path.join(process.cwd(), 'pages', 'index.jsx');
+          mainPagePath = path.join(pagesDir, 'index.jsx');
         }
         if (!fileExists(mainPagePath)) {
-          mainPagePath = path.join(process.cwd(), 'pages', 'index.js');
+          mainPagePath = path.join(pagesDir, 'index.js');
         }
       }
 
@@ -124,8 +132,10 @@ async function cleanNextjsBoilerplate() {
         // Create a simple starting page component
         const simplePageComponent = `export default function Home () {
   return (
-    <main className="p-6">
-      <h1 className="text-3xl font-bold">Let's do this</h1>
+    <main className="p-6 bg-black h-screen">
+      <h1 className="text-3xl font-bold p-6 bg-gradient-to-r from-violet-700 to-blue-500 rounded-xl text-white shadow-2xl">
+        Let&apos;s do this
+      </h1>
     </main>
   );
 }

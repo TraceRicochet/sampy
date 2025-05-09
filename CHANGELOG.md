@@ -11,10 +11,6 @@ All notable changes to this project will be documented in this file.
 - **release:** V1.6.1 ([278bb62](https://github.com/TraceRicochet/sampy/commit/278bb62))
 - Removed unneeded file ([2ce2bb2](https://github.com/TraceRicochet/sampy/commit/2ce2bb2))
 
-### ❤️ Contributors
-
-- Trace Ricochet <lasercobra@protonmail.com>
-
 ## v1.6.1
 
 [compare changes](https://github.com/TraceRicochet/sampy/compare/v1.2.1...v1.6.1)
@@ -31,7 +27,6 @@ All notable changes to this project will be documented in this file.
 - Updated all occurances of weez to sampy ([b8a54a3](https://github.com/TraceRicochet/sampy/commit/b8a54a3))
 - Bumped a version and published ([1d7785f](https://github.com/TraceRicochet/sampy/commit/1d7785f))
 
-
 ## v1.2.1
 
 [compare changes](https://github.com/TraceRicochet/weez-cli/compare/v1.2.0...v1.2.1)
@@ -43,7 +38,6 @@ All notable changes to this project will be documented in this file.
 ### 🏡 Chore
 
 - **release:** V1.2.0 ([0ee2394](https://github.com/TraceRicochet/weez-cli/commit/0ee2394))
-
 
 ## v1.2.0
 
@@ -75,9 +69,7 @@ All notable changes to this project will be documented in this file.
 - Add rules to .gitignore ([36e77df](https://github.com/TraceRicochet/weez-cli/commit/36e77df))
 - Deleted unused package.json file ([ae95084](https://github.com/TraceRicochet/weez-cli/commit/ae95084))
 
-
 ## v1.1.0
-
 
 ### 🚀 Enhancements
 
@@ -117,5 +109,3 @@ All notable changes to this project will be documented in this file.
 ### 🎨 Styles
 
 - Changed the weez ascii text to cyan ([5f33b98](https://github.com/TraceRicochet/weez-cli/commit/5f33b98))
-
-
