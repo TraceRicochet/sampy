@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.2
+
+[compare changes](https://github.com/TraceRicochet/sampy/compare/v1.6.1...v1.6.2)
+
+### 🏡 Chore
+
+- **release:** V1.6.1 ([278bb62](https://github.com/TraceRicochet/sampy/commit/278bb62))
+- Removed unneeded file ([2ce2bb2](https://github.com/TraceRicochet/sampy/commit/2ce2bb2))
+
+### ❤️ Contributors
+
+- Trace Ricochet <lasercobra@protonmail.com>
+
 ## v1.6.1
 
 [compare changes](https://github.com/TraceRicochet/sampy/compare/v1.2.1...v1.6.1)
