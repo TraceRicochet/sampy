@@ -1,6 +1,6 @@
 {
   "name": "sampy",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "Setup All My Projects. Yeah! - A scaffolding CLI for frontend projects",
   "bin": {
     "sampy": "bin/sampy.js"
