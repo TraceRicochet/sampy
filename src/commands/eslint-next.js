@@ -191,7 +191,7 @@ async function updateVSCodeSettings(inquirer) {
 }
 
 module.exports = {
-  command: 'eslint',
-  description: 'Configure ESLint for your project with v9 flat config',
+  command: 'eslint-next',
+  description: 'Configure ESLint for Next.js projects with v9 flat config',
   action: configureEslint
 };

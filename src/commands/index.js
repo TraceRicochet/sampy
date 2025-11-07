@@ -1,28 +1,42 @@
 const prettierCommand = require('./prettier');
-const eslintCommand = require('./eslint');
+const eslintNextCommand = require('./eslint-next');
 const eslintReactCommand = require('./eslint-react');
+const installCommand = require('./install');
 const nextjsCleanCommand = require('./next-clean');
 const nextThemesToggleCommand = require('./next-themes-toggle');
+const reactCleanCommand = require('./react-clean');
 const commitlintCommand = require('./commitlint');
 const changelogCommand = require('./changelogen');
 const vitestCommand = require('./vitest');
+const zustandCommand = require('./zustand');
+const tailwindNextCommand = require('./tailwind-next');
+const tailwindReactCommand = require('./tailwind-react');
+const shadcnNextCommand = require('./shadcn-next');
+const shadcnReactCommand = require('./shadcn-react');
 
 /**
  * Registers all commands with the Commander program
  * @param {Object} program - Commander program instance
  */
 function registerCommands(program) {
-  // Register each command
+  // Register each command (alphabetically ordered)
   const commands = [
-    prettierCommand,
-    eslintCommand,
+    changelogCommand,
+    commitlintCommand,
+    eslintNextCommand,
     eslintReactCommand,
+    installCommand,
     nextjsCleanCommand,
     nextThemesToggleCommand,
-    commitlintCommand,
-    changelogCommand,
-    vitestCommand
-    // Add new commands here
+    prettierCommand,
+    reactCleanCommand,
+    shadcnNextCommand,
+    shadcnReactCommand,
+    tailwindNextCommand,
+    tailwindReactCommand,
+    vitestCommand,
+    zustandCommand
+    // Add new commands here in alphabetical order
   ];
 
   commands.forEach(cmd => {
