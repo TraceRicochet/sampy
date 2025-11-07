@@ -1,5 +1,6 @@
 const prettierCommand = require('./prettier');
 const eslintCommand = require('./eslint');
+const eslintReactCommand = require('./eslint-react');
 const nextjsCleanCommand = require('./next-clean');
 const nextThemesToggleCommand = require('./next-themes-toggle');
 const commitlintCommand = require('./commitlint');
@@ -15,6 +16,7 @@ function registerCommands(program) {
   const commands = [
     prettierCommand,
     eslintCommand,
+    eslintReactCommand,
     nextjsCleanCommand,
     nextThemesToggleCommand,
     commitlintCommand,
